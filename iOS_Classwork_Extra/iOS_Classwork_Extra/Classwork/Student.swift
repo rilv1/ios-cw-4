@@ -17,7 +17,27 @@ import Foundation
 
 //struct ...
 
-
+struct Student {
+    var name: String
+    var track: String
+    var gender: String
+    
+    func imageName() -> String {
+        if gender == "boy"{
+            return "boyProfileImage"
+        }
+        
+        else if gender == "girl"{
+            return "girlProfileImage"
+            
+        }
+        
+        else{
+            return "ProfileImage"
+        }
+    }
+    
+}
 
 
 
@@ -32,7 +52,6 @@ import Foundation
   - يكون هذا النص يساوي  `boyProfileImage` في حال كان gender قيمته "boy"
  - يكون هذا النص يساوي  `girlProfileImage` في حال كان gender قيمته "girl"
  */
-
 
 
 
@@ -57,6 +76,11 @@ import Foundation
 //        Student(...
 //    ]
 
+var students = [
+    Student(name: "عمر سعيد ", track: "ios", gender: "boy"),
+    Student(name: "مناور العازمي", track: "web", gender: "boy"),
+    Student(name: "ريم خالد", track: "Android", gender: "boy"),
+]
 
 
 
